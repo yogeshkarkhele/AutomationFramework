@@ -16,7 +16,7 @@ public class ActionClass extends BaseTestCase{
 	@Test
 	public void testActionClass() throws InterruptedException {
 
-		HomePage homePage= new HomePage(driver);
+		HomePage homePage = new HomePage(driver);
 		
 		utilities.ScrollInViewByJS(driver, homePage.linkDynamicID);
 		
