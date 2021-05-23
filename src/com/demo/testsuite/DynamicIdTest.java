@@ -27,7 +27,6 @@ public class DynamicIdTest extends BaseTestCase{
 		AssertJUnit.assertTrue(dynamicIDPage.pageHeader.getText().equals("Dynamic ID"));
 	}
 	
-	//@Test
 	@Test
 	public void test2() throws InterruptedException {
 		
