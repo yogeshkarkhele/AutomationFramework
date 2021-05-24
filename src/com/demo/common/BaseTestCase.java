@@ -34,23 +34,4 @@ public class BaseTestCase {
 		driver.quit();
 	}
 
-	public void explicitWait() {
-		WebDriverWait webDriverWait = new WebDriverWait(driver, 20);
-		webDriverWait.until(ExpectedConditions.alertIsPresent());
-	}
-
-
-	public void fluentWait() {
-
-		FluentWait<WebDriver> wait1 = new FluentWait<WebDriver>(driver)
-				.withTimeout(Duration.ofSeconds(30))
-				.pollingEvery(Duration.ofSeconds(2))
-				.ignoring(Exception.class);
-		wait1.until(ExpectedConditions.invisibilityOf((WebElement) By.xpath("//img[@src='http://seleniumeasy.com/test/img/loader-image.gif']")));
-
-	}
-
-
-
-
 }
