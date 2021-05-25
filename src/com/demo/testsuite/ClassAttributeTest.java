@@ -31,7 +31,7 @@ public class ClassAttributeTest extends BaseTestCase{
 		classAttributePage.invoke();
 		classAttributePage.VerifyPageHeader();
 		//assertTrue(classAttributePage.pageHeader.getText().equals("Class Attrib"));
-		assertTrue(driver.getTitle().equals("Class Attribute"));	
+		assertTrue(driver.getTitle().equals("Class   Attribute"));	
 	}
 
 	@Test
