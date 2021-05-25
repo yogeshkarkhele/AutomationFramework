@@ -19,5 +19,9 @@ public class ActionClass extends BaseTestCase{
 		
 		Thread.sleep(10000);
 	}
+	
+	public void testMethod() {
+		
+	}
 
 }
