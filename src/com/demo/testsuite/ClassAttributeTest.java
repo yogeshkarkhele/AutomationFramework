@@ -1,6 +1,7 @@
 package com.demo.testsuite;
 
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import org.testng.AssertJUnit;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -31,7 +32,7 @@ public class ClassAttributeTest extends BaseTestCase{
 		classAttributePage.invoke();
 		classAttributePage.VerifyPageHeader();
 		//assertTrue(classAttributePage.pageHeader.getText().equals("Class Attrib"));
-		assertTrue(driver.getTitle().equals("Class   Attribute"));	
+		assertTrue(driver.getTitle().equals("Class     Attribute"));	
 	}
 
 	@Test
@@ -39,5 +40,11 @@ public class ClassAttributeTest extends BaseTestCase{
 		ClassAttributePage classAttributePage = new ClassAttributePage(driver);
 		classAttributePage.invoke();
 		assertTrue(classAttributePage.buttonSuccess.isDisplayed(),"Button success is displayed");
+	}
+	
+	@Test(dataProvider = "SearchProvider")
+	public void testDataProvider(String name, String country,String pincode) throws InterruptedException {
+		
+		System.out.println(name+"==="+country);
 	}
 }

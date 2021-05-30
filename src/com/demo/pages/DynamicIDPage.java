@@ -6,12 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-/**
-*
-*<img src="D://Users//ykarkhele//MyWorkspaceTest//AutomationFramework//screenshot//DynamicIDPage.png">
-*
-**/
-
 public class DynamicIDPage {
 	
 	public DynamicIDPage(){

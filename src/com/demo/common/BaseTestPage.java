@@ -15,6 +15,21 @@ public class BaseTestPage {
 		WebDriverWait webDriverWait = new WebDriverWait(BaseTestCase.driver, 20);
 		webDriverWait.until(ExpectedConditions.numberOfElementsToBe(by, 1));
 	}
+	
+	public static void WaitforElementToBeVisible(WebElement webElement) {
+		WebDriverWait webDriverWait = new WebDriverWait(BaseTestCase.driver, 20);
+		webDriverWait.until(ExpectedConditions.visibilityOf(webElement));
+	}
+	
+	public void WaitforElementToBeClickable(WebElement webElement) {
+		WebDriverWait webDriverWait = new WebDriverWait(BaseTestCase.driver, 20);
+		webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement));
+	}
+	
+	public void WaitforElementToBeVisible(By by) {
+		WebDriverWait webDriverWait = new WebDriverWait(BaseTestCase.driver, 20);
+		webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(by));
+	}
 
 	public void WaitforPageToBePresent(By by) {
 		FluentWait<WebDriver> wait1 = new FluentWait<WebDriver>(BaseTestCase.driver)
